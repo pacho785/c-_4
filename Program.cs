@@ -1,30 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics.SymbolStore;
+
 Console.WriteLine("Hello, World!");
+// && = and (Todas las condiciones deben ser verdaderas para que se ejecute) 
+// || = or ( una de las condiciones debe ser verdadera para que se ejecute )
+// ! not- negacion 
+// XOR ^ ( alt + 94 )
 
-var (valor1,valor2, valor3) = (10, 10, 2);
-Console.WriteLine("los valores son: " + valor1 +", " + valor2 + ", " + valor3);
+//&&
 
-//== igual a
-//!= diferente a 
-//> mayor que
-//< menor que
-//>= mayor a igual
-//<= menor o igual 
+//bool valor1 = true;
+//bool valor2 = true;
+//bool valor3 = true;
+var (valor1, valor2, valor3) = (true, true, false);
+bool resultado = valor1 && valor2;
 
-bool resultado = valor1 == valor2;
-Console.WriteLine("El resultado de la comparacion es: " + resultado);
+Console.WriteLine(resultado);
 
-bool rsultado2  = valor2 != valor2;
-Console.WriteLine("El resultado de la comparacion es: " + rsultado2 );
+//  ||
+bool result0r = valor1 || valor2 || valor3;
+Console.WriteLine(result0r);
 
-bool resultado3 = valor1 > valor2;
-Console.WriteLine("El resultado de la comparacion es : " + resultado3);
 
-bool resultado4 =  valor1 < valor2;
-Console.WriteLine("El resultado de la comparacion es: " + resultado4);
+bool resultANDOR = (valor1 && valor2) || valor3;
+Console.WriteLine(resultANDOR);
 
-bool resultado5 = valor1 >= valor2;
-Console.WriteLine("El resultado de la comparacion es: " + resultado5);
+// ! NOT ( Invierte algo en este caso el true a un false ) 
 
-bool resultado6 = valor1 <= valor2;
-Console.WriteLine("El resultado de la comparcion es: " + resultado6);
+bool resulNot = !valor1;
+Console.WriteLine(resulNot);
+
+//XOR ^ 
+
+bool resulXor =(valor1  ^ valor2) ^ valor3; 
+Console.WriteLine(resulXor); 
